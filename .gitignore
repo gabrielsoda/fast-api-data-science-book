@@ -1,6 +1,7 @@
 # Ignorar entornos virtuales
 .venv/
 env/
+.fastapi-proyecto-libro/
 __pycache__/
 .ipynb_checkpoints/
 
