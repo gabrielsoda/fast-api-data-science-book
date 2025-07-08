@@ -1,10 +1,6 @@
-import sys
-import pkg_resources
+def f(a, *args, **kwargs):
+    print ("a", a)
+    print ("args", args)
+    print ("kwargs", kwargs)
 
-# Imprimir versión de Python
-print(f"Python version: {sys.version}")
-
-# Imprimir todas las dependencias instaladas
-print("\nInstalled packages:")
-for dist in pkg_resources.working_set:
-    print(f"{dist.project_name}=={dist.version}")
+f(1,2,3,"frent",4,5)
