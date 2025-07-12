@@ -12,5 +12,30 @@ from typing import List, Union
 lu : List[Union[int, float]] = [1, 2.5, 3.14, 5]
 
 
+from typing import Optional
+def greeting(name: Optional[str] = None) -> str:
+    return f"Hello, {name if name else 'Anonymous'}"
 
- 
+
+
+from typing import Tuple
+IntStringFloatTuple = Tuple[int, str, float] 
+t: IntStringFloatTuple = (1, "hello", 3.14)
+
+#asignación de alias de typos complejos
+
+
+
+#type function signatures with callable
+
+from typing import Callable, List 
+ConditionFunction = Callable[[int], bool]
+def filter_list(l: List[int], condition: ConditionFunction) -> List[int]:
+    return [i for i in l if condition(i)]
+
+
+from typing import Any
+def f(x: Any) -> Any: 
+    return x
+
+# cuando se complica el codigo podemos poner any para indicar al type checker, en mi caso pylance con pyright que está todo bien y cualquier typo es válido

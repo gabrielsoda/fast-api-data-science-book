@@ -13,3 +13,4 @@ app = FastAPI()
 @app.post('/users')
 async def create_user(name: str = Body(...), age: int = Body(...)):
     return {'name': name, 'age': age}
+# si se lo pasa con un valor faltante o incorrecto devuelve error 422
